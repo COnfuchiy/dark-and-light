@@ -1,0 +1,39 @@
+.main-dark{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center; /*центрируем элемент по горизонтали */
+    align-items: center; /* и вертикали */
+    object-position: center;
+    text-align: center;
+}
+.main-light{
+    overflow: hidden;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    justify-content: center; /*центрируем элемент по горизонтали */
+    align-items: center; /* и вертикали */
+    display: flex;
+    object-position: center;
+}
+.main-light img, .main-dark img {
+    margin: auto;
+    transition: 0.3s ease;
+}
+.main-light img:hover, .main-dark img:hover {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+    transform: scale(1,1);
+}
+.dark-label{
+
+    margin: auto;
+    z-index: 100;
+}
