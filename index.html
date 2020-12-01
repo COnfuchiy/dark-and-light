@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link type="text/css" href="source/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="source/questions.js"></script>
+    <script src="source/Tree.js"></script>
+    <script src="source/main.js"></script>
 </head>
 <body>
-<div>
+<div class="content">
     <div class="main-dark">
-        <img src="source/img/main-dark.jpg">
-       Во тьму
+        <div class="dark-label" onclick="start_game()">Во тьму</div>
     </div>
     <div class="main-light">
-        <img src="source/img/main-light.jpg">
-        <div class="light-label">К свету</div>
+        <div class="light-label" onclick="start_game()">К свету</div>
     </div>
 </div>
 </body>
