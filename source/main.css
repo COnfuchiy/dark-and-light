@@ -1,4 +1,9 @@
-.main-dark, .main-light{
+body{
+    background-color: black;
+}
+
+.main-dark,
+.main-light {
     -webkit-filter: brightness(40%);
     filter: brightness(40%);
     position: fixed;
@@ -12,21 +17,21 @@
     /* и вертикали */
     object-position: center;
     text-align: center;
-    background-size: cover;
     transition: 0.3s ease;
-
 }
 
 .main-dark {
     top: 0;
     left: 0;
     background: url('img/main-dark.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .main-light {
     top: 0;
     right: 0;
     background: url('img/main-light.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .main-light,
@@ -40,22 +45,28 @@
     filter: brightness(100%);
 }
 
-.dark-label,.light-label {
+.dark-label,
+.light-label {
     color: white;
     font-size: 40px;
     font-family: creenge;
     margin: auto;
     z-index: 100;
 }
+
 @font-face {
-
-    font-family: creenge; /* Имя шрифта */
-
-    src: url(./19273.ttf); /* Путь к файлу со шрифтом */
-
+    font-family: creenge;
+    /* Имя шрифта */
+    src: url(./19273.ttf);
+    /* Путь к файлу со шрифтом */
 }
 
-.photo{
+@font-face {
+    font-family: durka;
+    src: url(./17806.ttf);
+}
+
+.photo {
     position: fixed;
     top: 0;
     left: 0;
@@ -65,25 +76,41 @@
     overflow: hidden;
     background-color: black;
     justify-content: center;
+    background-size: cover !important;
 }
-.questions-field{
-    position: fixed;
+
+.questions-field {
+    font-size: 22px;
+    position: absolute;
     left: 50%;
-    bottom: 30%;
-}
-.answ-area{
+    bottom: 25%;
+    transform: translateX(-50%);
+    font-family: durka;
     color: white;
-    position: fixed;
+}
+
+.answ-area {
+    font-family: durka;
+    color: white;
+    position: absolute;
     left: 50%;
-    bottom: 10%;
+    bottom: 15%;
+    transform: translateX(-50%);
 }
-.bad-karma{
-    float: left;
+
+.bad-karma {
+    margin: 100px;
+    text-decoration: none;
+    color: white;
 }
-.good-karma{
-    float: right;
+
+.good-karma {
+    margin: 100px;
+    text-decoration: none;
+    color: white;
 }
-.main-photo{
+
+.main-photo {
     width: 100%;
     height: 100%;
 }
