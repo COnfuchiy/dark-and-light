@@ -80,6 +80,7 @@ body{
 }
 
 .questions-field {
+    text-align: center;
     font-size: 22px;
     position: absolute;
     left: 50%;

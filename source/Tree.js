@@ -17,7 +17,7 @@ class Tree {
         this.current_node = this.root;
         this.search_result = '';
         this.create_tree();
-        this.brightness = 60;
+        this.brightness = 50;
     }
 
     start_game(index) {
