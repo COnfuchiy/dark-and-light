@@ -18,9 +18,12 @@ class Tree {
         this.search_result = '';
         this.create_tree();
         this.brightness = 50;
+        this.path = [];
     }
 
     start_game(index) {
+
+        this.path.push({question: "Свет или тьма?", answ:(!index ? "Вы начинаете свой путь во тьме":"Вы начинаете свой путь от света")});
         if (!index) {
             this.current_node = this.root.left;
         }
@@ -143,9 +146,21 @@ class Tree {
 
     }
 
+    handle_end_game(){
+        if (this.current_node.value===26){
+            end_game('Вас поглощает тьма...',this.path);
+        } else if (this.current_node.value===41){
+            end_game('Вы стремитесь к свету...',this.path);
+        }
+        else {
+            end_game('Вы застряли между светом и тьмой...',this.path);
+        }
+    }
+
     declarate_answer(answ) {
+        this.path.push({question: this.current_node.text, answ:(!answ ? "Это про меня...":"Это не я...")});
         if (!this.current_node.left && !this.current_node.right) {
-            alert('Игра окончена! Вы шизоид!');
+            this.handle_end_game();
         }
         else {
             if (!answ) {

@@ -42,6 +42,27 @@ window.onload = function (e) {
     document.tree = new Tree();
 };
 
+function end_game(results, path) {
+    $('.answ-area').empty();
+    $('.questions-field').empty();
+    $('.content').append(`
+    <div class="end-game-content">
+        <div class="result-content">`
+        +results+`
+        </div>
+        <div class="path-content"></div>
+        <div class="btn-again-content">
+            <a class="btn-again" href="#" onclick="location.reload();">Пройти тест заново</a>
+        </div>
+    </div>`);
+    let path_area = $('.path-content');
+    for(let answ of path){
+        path_area.append(`
+        <div class="path-item">`+(path.indexOf(answ)+1)+`. "`+answ.question+`": <span class="answ-text">`+answ.answ+`</span></div>
+        `);
+    }
+}
+
 function start_game(index) {
     let content_area = $('.content');
     content_area.empty();

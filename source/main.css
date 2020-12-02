@@ -115,3 +115,41 @@ body{
     width: 100%;
     height: 100%;
 }
+.end-game-content{
+    font-family: durka;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 20%;
+    left:25%;
+    width: 50%;
+    height: 50%;
+    overflow-x: auto;
+    border: 3px solid lightgoldenrodyellow;
+    border-radius: 12px;
+}
+
+.path-item{
+    margin: 5px;
+}
+
+.btn-again{
+    color: darkred;
+    text-decoration: none;
+}
+
+.btn-again-content{
+    position: relative;
+    top:10%;
+    text-align: center;
+}
+
+.answ-text{
+    color: cornflowerblue;
+}
+.result-content{
+    text-align: center;
+    margin: 10px;
+    color: dimgrey;
+    font-size: 18px;
+}
